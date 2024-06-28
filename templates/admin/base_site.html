@@ -1,0 +1,12 @@
+{% extends "admin/base.html" %}
+
+{% block title %}Les Gourmet Administration {% endblock %}
+
+{% block branding %}
+<div id="site-name" style="font-weight: bold;"><a href="{% url 'admin:index' %}"><span style="color: white;">Les Gourmet Administration</span></a></div>
+{% if user.is_anonymous %}
+  {% include "admin/color_theme_toggle.html" %}
+{% endif %}
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

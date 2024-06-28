@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home Page
+{% endblock %}
+
+{% block content %}
+<h1>Hello World!!! Here is my shop page of store app</h1>
+
+
+<h2>{{ product.name }}</h2>
+<img src="{{ product.image.url }}" alt="{{ product.name }}" >
+<p>{{ product.description }}</p>
+<p>Price: Rs {{ product.price }}</p>
+<button type="button" value="{{product.id}}" id="add-cart">Add to Cart</button>
+<script>
+    $(document).on('click', '#add-cart', function(e){
+        e.preventDefault();
+        $.ajax({
+            type: 'POST',
+            url: '{% url "cart_add" %}',
+            data: {
+                product_id: $('#add-cart').val(),
+                csrfmiddlewaretoken: '{{ csrf_token }}',
+                action: 'post'
+            },
+            success: function(json) {
+                console.log(json);
+            },
+            error: function(xhr, errmsg, err) {
+                console.log("Hey! there is an error in the adding process.");
+            }
+        });
+    });
+</script>
+
+
+{% endblock %}
