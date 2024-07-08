@@ -22,16 +22,9 @@
           <p class="px-3 mt-2 text-xs text-gray-400">{{product.description}}</p>
           <div class="justify-between px-3">
               <div class="flex flex-col justify-between text-base font-medium text-gray-900">
-                <p class="text-red-500 text-xl">$ {{product.price_per_unit}} <span class="text-gray-400 text-sm">/ per {{product.unit}}</span></p>
+                <p class="text-red-500 text-xl">Rs {{product.price_per_unit}} <span class="text-gray-400 text-sm">/ per {{product.unit}}</span></p>
               </div>
           </div>
-          <!-- <div>
-              <div class="flex justify-end  ">
-                <button class="bg-red-500 hover:bg-red-600  font-light text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline">
-                  +
-                </button>                     
-               </div>
-          </div> -->
         </li>
         {% endfor %}
       </ul>

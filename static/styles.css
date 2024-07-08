@@ -7,13 +7,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #25374F;
+    background-color: rgb(239 68 68);
     opacity: 1;
-    /* Initially visible */
     z-index: 9999;
-    /* Ensure it's on top of other content */
     animation: fadeIn 0s forwards, slideUp1 1s forwards 2s;
-    /* Fade in and then fade out */
   }
   
   .logo {
@@ -22,7 +19,6 @@
   }
   
   .content {
-    /* Adjust styles for your content */
     padding: 20px;
   }
   
