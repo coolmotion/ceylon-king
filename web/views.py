@@ -2,8 +2,8 @@ from django.shortcuts import render
 from resturant.models import Category
 
 
-def index(request):
-    return render(request, 'index.html')
+# def index(request):
+#     return render(request, 'index.html')
 
 
 def index(request):
